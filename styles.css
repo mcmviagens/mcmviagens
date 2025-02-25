@@ -1,0 +1,553 @@
+/* Estilos globais */
+body {
+    margin: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(145deg, #0077b6, #00b4d8);
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ffcc00;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.logo-container {
+    text-align: left;
+}
+
+.logo-container h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo-container p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #ffcc00;
+    margin: 5px 0 0 0;
+}
+
+.top-links {
+    position: absolute;
+    top: 1px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.top-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.3s ease;
+}
+
+.top-links a:hover {
+    color: #ffcc00;
+}
+
+.top-links span {
+    color: white;
+}
+
+.social-container {
+    text-align: right;
+}
+
+.social-container h3 {
+    font-size: 18px;
+    color: #ffcc00;
+    margin: 0 0 10px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffcc00;
+}
+
+/* Menu de navegação */
+.menu-container {
+    background: linear-gradient(145deg, #ffcc00, #ff9900);
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+    margin: 20px auto;
+    max-width: 90%;
+}
+
+.menu-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.menu-links a {
+    color: #003580;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.menu-links a:hover {
+    color: #ffcc00;
+    background: rgba(0, 53, 128, 0.9);
+}
+
+.menu-links a img {
+    width: 20px;
+    height: auto;
+}
+
+/* Corpo do site */
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+.cards-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+.cards-container.large {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.cards-container.medium {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    color: #0077b6;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 10px 0;
+}
+
+.card-content a {
+    display: inline-block;
+    background: #ffcc00;
+    color: #003580;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.card-content a:hover {
+    background: #ff9900;
+}
+
+.section-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0077b6;
+    text-align: center;
+    margin: 40px 0 20px 0;
+}
+
+/* Rodapé */
+footer {
+    background: linear-gradient(145deg, #0077b6, #00b4d8);
+    color: white;
+    padding: 30px;
+    text-align: left;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffcc00;
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.footer-social-icons a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+    color: #ffcc00;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-container h1 {
+        font-size: 32px; /* Tamanho menor para mobile */
+    }
+
+    .logo-container p {
+        font-size: 14px; /* Tamanho menor para mobile */
+    }
+
+    .top-links {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 10px;
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .social-container {
+        margin-top: 10px;
+        text-align: left;
+    }
+
+    .menu-links {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .cards-container.large {
+        grid-template-columns: repeat(1, 1fr); /* 1 coluna em mobile */
+    }
+
+    .cards-container.medium {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em mobile */
+    }
+
+    .card img {
+        height: 150px; /* Altura menor para mobile */
+    }
+
+    .card-content h3 {
+        font-size: 16px; /* Tamanho menor para mobile */
+    }
+
+    .card-content p {
+        font-size: 12px; /* Tamanho menor para mobile */
+    }
+
+    .section-title {
+        font-size: 20px; /* Tamanho menor para mobile */
+        margin: 20px 0 10px 0;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-social-icons {
+        justify-content: center;
+    }
+}
+
+/* Estilo para o pop-up */
+.popup {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    width: 300px;
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 10px;
+}
+/* Estilo para a página de ofertas */
+.offer-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.offer-section h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+.offer-section p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.offer-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.offer-section input, .offer-section textarea {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.offer-section textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.offer-section button {
+    background-color: #ffcc00;
+    color: #003580;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.offer-section button:hover {
+    background-color: #ff9900;
+}
+
+/* Rodapé */
+footer {
+    background-color: #0077b6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.footer-social-icons a:hover {
+    color: #ffcc00;
+}
+/* Estilos gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Pop-up */
+.popup {
+    display: none; /* Esconde o pop-up por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.popup h2 {
+    color: #005b96; /* Azul */
+    margin-bottom: 10px;
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popup label {
+    text-align: left;
+}
+
+.popup input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup button {
+    background-color: #ffcd00; /* Amarelo */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popup button:hover {
+    background-color: #e0b400; /* Amarelo mais escuro */
+}
+
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}

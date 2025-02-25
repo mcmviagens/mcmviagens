@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MCM Viagens - Encontre as melhores ofertas de passagens, hotéis e cruzeiros">
+    <meta name="keywords" content="viagens, passagens, hotéis, cruzeiros, ofertas">
+    <meta name="author" content="MCM Viagens">
+    <title>MCM VIAGENS</title>
+    
+    <!-- Fontes e ícones -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo-container">
+            <div>
+                <h1>MCM VIAGENS</h1>
+                <p>Digital Agency</p>
+            </div>
+        </div>
+        
+        <!-- Links superiores -->
+        <div class="top-links">
+            <a href="#"><i class="fas fa-user-plus"></i> Cadastre-se</a>
+            <span>|</span>
+            <a href="#"><i class="fas fa-user-circle"></i> Minha Conta</a>
+            <span>|</span>
+            <a href="#"><i class="fas fa-question-circle"></i> Dúvidas?</a>
+            <span>|</span>
+            <a href="ofertas.html"><i class="fas fa-envelope"></i> Ofertas</a>
+            <span>|</span>
+            <a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </div>
+
+        <!-- Busca -->
+        <div class="search-container">
+            <input type="text" placeholder="Buscar..." class="search-input">
+            <button class="search-button"><i class="fas fa-search"></i></button>
+        </div>
+
+        <!-- Redes sociais -->
+        <div class="social-container">
+            <h3>Siga-nos nas Redes sociais:</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Popup de Cadastro -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-button" onclick="closePopup()">&times;</span>
+            <h2>📩 Receba Ofertas Exclusivas!</h2>
+            
+            <form id="popupForm">
+                <div class="form-group">
+                    <input type="text" id="nome" placeholder="Nome completo" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Seu melhor e-mail" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder="Telefone">
+                </div>
+                
+                <button id="closeBtn">Fechar</button>
+            </form>
+        </div>
+    </div>
+
+            <!-- Menu de navegação -->
+            <div class="menu-container">
+                <nav class="menu-links">
+                    <a href="#"><i class="fas fa-tags"></i> OFERTAS</a>
+                    <a href="#"><i class="fas fa-suitcase"></i> PACOTES</a>
+                    <a href="#"><i class="fas fa-ship"></i> CRUZEIROS</a>
+                    <a href="#"><i class="fas fa-hotel"></i> HOTÉIS</a>
+                    <a href="#"><i class="fas fa-plane"></i> PASSAGENS</a>
+                    <a href="#"><i class="fas fa-blog"></i> BLOG</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i> Pertinho de São Paulo</a>
+                    <a href="#">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Gay_Pride_Flag.svg/1280px-Gay_Pride_Flag.svg.png" alt="Bandeira LGBT">
+                        VIAGENS LGBTQA+
+                    </a>
+                </nav>
+            </div>
+    
+            <!-- Conteúdo principal -->
+            <main>
+                <div class="section-title">MAIS VENDIDOS - Aproveite!</div>
+                <div class="cards-container large">
+                    <div class="card">
+                        <a href="https://www.thermas.com.br/ingresso/parceiros/mcm-viagens">
+                            <img src="imagens/thermas_Card1.jpg" alt="Thermas de São Pedro">
+                            <div class="card-content">
+                                <h3>INGRESSO PARA O THERMAS DE SÃO PEDRO</h3>
+                                <p>Vários combos de ingresso para o Thermas de Águas de São Pedro, com desconto.</p>
+                                <span class="cta-button">Ver oferta</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </main>
+    
+            <!-- Rodapé -->
+            <footer>
+                <div class="footer-left">
+                    <div class="footer-links">
+                        <a href="#">Política de Privacidade</a>
+                        <a href="#">Termos de Uso</a>
+                        <a href="#">Fale Conosco</a>
+                        <a href="#">Sobre Nós</a>
+                    </div>
+                </div>
+                <div class="footer-center">
+                    <p>Endereço: Rua Exemplo, 123 - São Paulo, SP</p>
+                    <p>Telefone: (11) 1234-5678 | E-mail: contato@mcmviagens.com</p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </footer>
+            
+            <script>
+                function closePopup() {
+                    document.getElementById("popup").style.display = "none";
+                }
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+            <script src="javascript.js"></script> 
+        </body>
+    </html>
+
+
