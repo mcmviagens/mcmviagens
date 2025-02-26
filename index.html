@@ -15,6 +15,32 @@
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
+    <script>
+document.getElementById('offerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Coletar dados do formulário
+    const formData = {
+        name: this.name.value,
+        email: this.email.value,
+        phone: this.phone.value,
+        travel_date: this.travel_date.value,
+        timestamp: new Date().toISOString()
+    };
+
+    // Salvar no LocalStorage
+    let submissions = JSON.parse(localStorage.getItem('formSubmissions')) || [];
+    submissions.push(formData);
+    localStorage.setItem('formSubmissions', JSON.stringify(submissions));
+
+    // Feedback e limpeza
+    alert('Obrigado! Suas informações foram salvas com sucesso.');
+    this.reset();
+    document.querySelector('.popup').style.display = 'none';
+});
+</script>
+    
 <body>
     <!-- Cabeçalho -->
     <header>
@@ -56,28 +82,17 @@
     </header>
 
     <!-- Popup de Cadastro -->
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close-button" onclick="closePopup()">&times;</span>
-            <h2>📩 Receba Ofertas Exclusivas!</h2>
-            
-            <form id="popupForm">
-                <div class="form-group">
-                    <input type="text" id="nome" placeholder="Nome completo" required>
-                </div>
-                
-                <div class="form-group">
-                    <input type="email" id="email" placeholder="Seu melhor e-mail" required>
-                </div>
-                
-                <div class="form-group">
-                    <input type="tel" id="phone" name="phone" placeholder="Telefone">
-                </div>
-                
-                <button id="closeBtn">Enviar contato</button>
-            </form>
-        </div>
-    </div>
+<div class="popup-content">
+    <span class="close-popup">&times;</span>
+    <h2>Receba Nossas Ofertas!</h2>
+    <form id="offerForm">
+        <input type="text" name="name" placeholder="Seu nome completo" required>
+        <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+        <input type="tel" name="phone" placeholder="Seu telefone" required>
+        <input type="date" name="travel_date" required>
+        <button type="submit">Receber Ofertas!</button>
+    </form>
+</div>
 
     <!-- Menu de navegação -->
     <div class="menu-container">
