@@ -73,3 +73,4 @@ document.getElementById('popupForm').addEventListener('submit', function(e) {
     date.setTime(date.getTime() + (7 * 24 * 60 * 60 * 1000));
     document.cookie = `popupClosed=true; expires=${date.toUTCString()}; path=/`;
 });
+
