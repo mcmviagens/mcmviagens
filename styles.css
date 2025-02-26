@@ -513,3 +513,15 @@ footer {
 .footer-social-icons a:hover {
     color: #ffcc00;
 }
+/* Correção emergencial - Popup */
+.popup {
+    display: none !important; /* Reset inicial */
+}
+
+.popup.active {
+    display: flex !important; /* Exibir quando ativo */
+}
+
+body.popup-open {
+    overflow: hidden; /* Travar scroll */
+}
