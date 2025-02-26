@@ -48,7 +48,28 @@ window.addEventListener('load', () => {
 // Fechar popup
 document.querySelector('.close-popup').addEventListener('click', () => {
     document.querySelector('.popup').style.display = 'none';
-});    
+});
+        
+        // Mostrar popup após 2 segundos
+setTimeout(() => {
+    const popup = document.querySelector('.popup');
+    popup.classList.add('active');
+    document.body.classList.add('popup-open');
+}, 2000);
+
+// Fechar popup
+document.querySelector('.close-popup').addEventListener('click', () => {
+    document.querySelector('.popup').classList.remove('active');
+    document.body.classList.remove('popup-open');
+});
+
+// Fechar ao clicar fora
+document.querySelector('.popup').addEventListener('click', (e) => {
+    if(e.target === document.querySelector('.popup')) {
+        e.target.classList.remove('active');
+        document.body.classList.remove('popup-open');
+    }
+});
         
 </script>
     
@@ -92,17 +113,12 @@ document.querySelector('.close-popup').addEventListener('click', () => {
         </div>
     </header>
 
-<!-- Popup de Cadastro -->
-<div class="popup"> <!-- Container principal adicionado -->
+<div class="popup">
     <div class="popup-content">
         <span class="close-popup">&times;</span>
         <h2>Receba Nossas Ofertas!</h2>
         <form id="offerForm">
-            <input type="text" name="name" placeholder="Seu nome completo" required>
-            <input type="email" name="email" placeholder="Seu melhor e-mail" required>
-            <input type="tel" name="phone" placeholder="Seu telefone" required>
-            <input type="date" name="travel_date" required>
-            <button type="submit">Receber Ofertas!</button>
+            <!-- ... campos do formulário ... -->
         </form>
     </div>
 </div>
