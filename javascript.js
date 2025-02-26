@@ -74,3 +74,43 @@ document.getElementById('popupForm').addEventListener('submit', function(e) {
     document.cookie = `popupClosed=true; expires=${date.toUTCString()}; path=/`;
 });
 
+// javascript.js
+document.getElementById('offerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Acesso seguro aos elementos
+    const formElements = {
+        name: this.querySelector('[name="name"]'),
+        email: this.querySelector('[name="email"]'),
+        phone: this.querySelector('[name="phone"]'),
+        travel_date: this.querySelector('[name="travel_date"]')
+    };
+
+    // Verificação de elementos
+    if(!Object.values(formElements).every(element => element !== null)) {
+        console.error('Elementos do formulário não encontrados!');
+        return;
+    }
+
+    // Coletar dados
+    const formData = {
+        name: formElements.name.value,
+        email: formElements.email.value,
+        phone: formElements.phone.value,
+        travel_date: formElements.travel_date.value,
+        timestamp: new Date().toISOString()
+    };
+
+    // Resto do código permanece igual
+    let submissions = JSON.parse(localStorage.getItem('formSubmissions')) || [];
+    submissions.push(formData);
+    localStorage.setItem('formSubmissions', JSON.stringify(submissions));
+
+    alert('Obrigado! Suas informações foram salvas com sucesso.');
+    this.reset();
+    document.querySelector('.popup').classList.remove('active');
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Todo o código relacionado ao formulário aqui
+});
